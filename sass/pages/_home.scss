@@ -38,3 +38,55 @@
     position: relative;
     // height: fit-content;
 }
+
+.section__book{
+    padding: 8rem 13rem;
+    background: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+}
+
+.book{
+    background-image: linear-gradient(110deg,rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 50%, transparent 50%) ,url(../../img/nat-10.jpg);
+    background-size: cover;
+
+    height: 50rem;
+
+    &__form{
+        padding: 5rem;
+        width: 50%;
+    }
+}
+
+.button{
+    display: inline-block;
+    
+}
+
+.button-holder{
+    margin: 2rem 0 5rem 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    // text-justify: center;
+}
+
+.button-caption{
+    margin: 0 1.5rem;
+    display: inline-block;
+    font-weight: 700;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+}
+.form{
+    &--input{
+        font-size: inherit;
+        font-style: inherit;
+        display: block;
+        width: 90%;
+        padding: 1.5rem 2rem;
+        background-color: rgba($color-white, 0.6);
+        border: none;
+        outline: none;
+    }
+}

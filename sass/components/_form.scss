@@ -1,0 +1,45 @@
+.label{
+    display: block;
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+    margin-left: 2rem;
+    transform: translateY(-4rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s;
+    font-weight: 700;
+    color: rgb(95, 94, 94);
+}
+
+    .form{
+        &--input{
+            color: rgb(48, 46, 46);
+            font-size: inherit;
+            font-style: inherit;
+            display: block;
+            width: 90%;
+            padding: 1.5rem 2rem;
+            background-color: rgba($color-white, 0.8);
+            border: none;
+            outline: none;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+            
+
+
+            &:focus{
+                border-bottom: 3px solid $color-primary;
+                box-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
+            }
+            &:focus:not(:placeholder-shown) + .label{
+                transform: translateY(0rem);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &:focus:invalid{
+                border-bottom: 3px solid rgb(255, 123, 0);
+            }
+        }
+    }

@@ -145,16 +145,53 @@ body {
   padding: 8rem 0;
   position: relative; }
 
-.btn:link, .btn:visited {
+.section__book {
+  padding: 8rem 13rem;
+  background: linear-gradient(to right bottom, #67e950, #28b485); }
+
+.book {
+  background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../../img/nat-10.jpg);
+  background-size: cover;
+  height: 50rem; }
+  .book__form {
+    padding: 5rem;
+    width: 50%; }
+
+.button {
+  display: inline-block; }
+
+.button-holder {
+  margin: 2rem 0 5rem 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; }
+
+.button-caption {
+  margin: 0 1.5rem;
+  display: inline-block;
+  font-weight: 700; }
+
+.form--input {
+  font-size: inherit;
+  font-style: inherit;
+  display: block;
+  width: 90%;
+  padding: 1.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  outline: none; }
+
+.btn, .btn:link, .btn:visited {
   position: relative;
   text-transform: uppercase;
   font-size: 1.7rem;
   text-decoration: none;
   display: inline-block;
   padding: 1.5rem 4rem;
+  border: none;
   transition: all 0.2s;
   border-radius: 10rem; }
-  .btn:link:not(.btn--green), .btn:visited:not(.btn--green) {
+  .btn:not(.btn--green), .btn:link:not(.btn--green), .btn:visited:not(.btn--green) {
     background-color: #ffffff; }
 
 .btn:hover {
@@ -175,9 +212,9 @@ body {
 
 .btn--green {
   color: #ffffff;
-  background-color: #67e950; }
+  background-color: #55c57a; }
   .btn--green::after {
-    background-color: #67e950; }
+    background-color: #55c57a; }
 
 .btn::after {
   content: "";
@@ -215,6 +252,31 @@ body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
+
+.radio-button {
+  display: inline-block;
+  height: 3.5rem;
+  width: 3.5rem;
+  padding: 5px;
+  border-radius: 50%;
+  border: 5px solid #55c57a; }
+
+.inner-button {
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s;
+  border-radius: 50%;
+  background-color: #55c57a;
+  background-color: transparent; }
+
+.radio-butt {
+  display: none; }
+
+#radio-one:checked + .radio-button .inner-button {
+  background-color: #55c57a; }
+
+#radio-two:checked + .radio-button .inner-button {
+  background-color: #55c57a; }
 
 .composition {
   position: relative; }
@@ -410,6 +472,40 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover; }
+
+.label {
+  display: block;
+  margin-left: 2rem;
+  transform: translateY(-4rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s;
+  font-weight: 700;
+  color: #5f5e5e; }
+  .label:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.form--input {
+  color: #302e2e;
+  font-size: inherit;
+  font-style: inherit;
+  display: block;
+  width: 90%;
+  padding: 1.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  outline: none;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s; }
+  .form--input:focus {
+    border-bottom: 3px solid #55c57a;
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3); }
+  .form--input:focus:not(:placeholder-shown) + .label {
+    transform: translateY(0rem);
+    opacity: 1;
+    visibility: visible; }
+  .form--input:focus:invalid {
+    border-bottom: 3px solid #ff7b00; }
 
 .header {
   position: relative;
