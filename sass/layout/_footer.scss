@@ -1,0 +1,61 @@
+.footer{
+    background-color: rgb(65, 62, 62);
+    padding: 10rem 0;
+    
+    
+    &__logo-box{
+        text-align: center;
+        margin-bottom: 8rem ;
+    }
+
+    &__logo{
+        width: 15rem;
+        height: auto;
+    }
+
+    &__list{
+        list-style: none;
+        border-top: 1px solid rgb(126, 125, 125);
+        // padding: 4.5rem;
+        // display: inline-block;
+        padding-top: 3rem;
+    }
+
+    &__item{
+        display: inline-block;
+        color: rgb(184, 179, 179);
+        &:not(:last-child){
+            margin-right: 1.2rem;
+        }
+    }
+
+    &__link{
+        display: inline-block;
+        background-color: none;
+        font-weight: 700;
+        transition: all .2s;;
+        &:link,
+        &:visited{
+        color: rgb(184, 179, 179);
+        text-decoration: none;
+        // padding: 0.5rem;
+        text-transform: uppercase;
+        }
+        &:hover,
+        &:active{
+            color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba($color-black,.4);
+            transform: scale(1.2) rotateZ(8deg);
+        }
+    }
+
+    &__navigation{
+        margin: 0 auto;
+        text-align: center;
+        display: inline-block;
+    }
+
+}
+.row2{
+    text-align: center;
+}

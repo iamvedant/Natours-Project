@@ -99,6 +99,14 @@
   padding: 5px;
   border-radius: 50%;
   border: 5px solid $color-primary;
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &:hover .inner-button{
+    background-color: rgba($color-primary, 0.4);
+  }
   // background-color: $color-primary-light;
 }
 
