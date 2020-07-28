@@ -4,5 +4,59 @@
     box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
     background-color: $color-white;
     border-radius: 3px;
-    padding: 5rem;
+    padding: 6rem;
+    font-size: 1.6rem;
+    transform: skewX(-12deg);
+    &>*{
+        transform: skewX(12deg);
+    }
+
+    @include clearfix;
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        background-color: orangered;
+        shape-outside: circle(50% at 50% 50%);
+        transform: skewX(12deg) translateX(-1.5rem);
+
+        clip-path: circle(45% at 50% 50%);
+    }
+
+    &__image{
+        height: 100%;
+        transform: translateX(-4rem) scale(1.4);
+        transition: all 0.2s;
+    }
+
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        color: white;
+        padding: 1rem;
+        box-decoration-break: clone;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all .5s;
+        opacity: 0;
+        backface-visibility: hidden;
+        // width: 100%;
+        // height: 100%;
+
+    }
+
+    &:hover &__caption{
+       opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__image{
+        transform: translateX(-4rem) scale(1);
+        background: rgba($color-black, 0.2);
+        filter: brightness(0.7) blur(2px);
+    }
 }
+
+
